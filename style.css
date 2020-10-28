@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #ecf0f1;
+}
+
+h1 {
+  font-family: "Inconsolata", monospace;
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  background-color: #706fd3;
+  border-bottom-left-radius: 7% 60%;
+  height: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  padding: 4.5rem 2rem 2rem 8%;
+}
+.header__mode {
+  margin-top: 3rem;
+  margin-right: 10rem;
+}
+
+.mode {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+}
+.mode__icon {
+  height: 2rem;
+  margin: 0 1rem;
+  justify-content: space-evenly;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 2.5rem;
+}
+.switch__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch__input:checked + .switch__slider::before {
+  transform: translateX(2.3rem);
+}
+.switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+}
+.switch__slider--round {
+  border-radius: 30px;
+}
+.switch__slider--round::before {
+  border-radius: 50%;
+}
+.switch__slider::before {
+  position: absolute;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  left: 3.5px;
+  bottom: 2.5px;
+  background-color: #706fd3;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navigation {
+  background-color: #fff;
+  width: 60%;
+  height: 8rem;
+  border-radius: 1rem;
+  margin: -3rem auto 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */
