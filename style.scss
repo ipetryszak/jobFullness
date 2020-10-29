@@ -2,6 +2,13 @@
 
 $color-primary: #706fd3;
 $color-secondary: #fff;
+$color-ternary: #ecf0f1;
+
+@mixin filterIcons {
+  stroke: $color-primary;
+  width: 20%;
+  transform: scale(.5);
+}
 *,
 *::after,
 *::before {
@@ -16,7 +23,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #ecf0f1;
+  background-color: $color-ternary;
 }
 
 h1 {
@@ -107,12 +114,128 @@ h1 {
 }
 
 .navigation {
-  background-color: $color-secondary;
+  background-color: $color-ternary;
   width: 60%;
   height: 8rem;
-  border-radius: 1rem;
   margin: -3rem auto 0 auto;
+  border-radius: 1rem;
 }
 
+.filter {
+ // border: magenta 1px solid;
+  border-radius: 1rem;
+  display: flex;
+  height: inherit;
+  width: 100%;
+  background-color: $color-secondary;
 
+  &__title {
+    flex: 3;
+    display: flex;
 
+    &--icon {
+      @include filterIcons;
+    }
+    &--input {
+      width: 80%;
+      outline: none;
+      border: none;
+      padding: 1rem 2rem;
+    }
+  }
+  &__location {
+    flex: 2;
+    display: flex;
+
+    &--icon {
+      @include filterIcons;
+      width: 25%;
+    }
+    &--input {
+      width: 75%;
+      outline: none;
+      border: none;
+      padding: 1rem 2rem;
+    }
+  }
+  &__time {
+    flex: 2;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    &--input {
+
+      flex: 3;
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+      cursor: pointer;
+
+      p {
+        position: absolute;
+        top: 0.5rem;
+        font-weight: bolder;
+        margin-left: 0.5rem;
+      }
+
+      input {
+        opacity: 0;
+      }
+
+      input:checked + .filter__time--input-checkmark {
+        background-color: $color-primary;
+      }
+
+      input:checked + .filter__time--input-checkmark::after {
+        display: block;
+      }
+
+    }
+    &--input-checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: $color-ternary;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 11px;
+        top: 6px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+
+    }
+    &--button {
+      flex: 2;
+      background-color: $color-primary;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      height: auto;
+      padding: 1.2rem 0.5rem;
+      color: $color-secondary;
+      margin-right: 2rem;
+      font-family: 'Inconsolata', monospace;
+      font-weight: 500;
+      font-size: 1.4rem;
+      border-radius: .3rem;
+
+      &:hover {
+        background: darken($color-primary,3);
+      }
+    }
+
+  }
+
+}

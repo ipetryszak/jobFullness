@@ -5,6 +5,8 @@
     <title>Find Your Next Job</title>
     <link href="style.css" rel="stylesheet">
 </head>
+
+
 <body>
     <div class="wrapper">
         <header class="header">
@@ -23,6 +25,30 @@
             </div>
         </header>
         <nav class="navigation">
+           <div class="filter">
+               <div class="filter__title">
+                   <svg class="filter__title--icon">
+                       <use xlink:href="images/basic_magnifier.svg#Layer_1"></use>
+                   </svg>
+                   <input class="filter__title--input" type="text" name="filter-by-title"
+                          placeholder="Filter by title, companies, expertise...">
+               </div>
+               <div class="filter__location">
+                   <svg class="filter__location--icon">
+                       <use xlink:href="images/basic_geolocalize-01.svg#Layer_1"></use>
+                   </svg>
+                   <input class="filter__location--input" type="text" name="filter-by-location"
+                          placeholder="Filter by location...">
+               </div>
+               <div class="filter__time">
+                   <label class="filter__time--input">
+                       <p>Full Time Only</p>
+                       <input type="checkbox">
+                       <span class="filter__time--input-checkmark"></span>
+                   </label>
+                   <button class="filter__time--button" type="button">Search</button>
+               </div>
+           </div>
 
         </nav>
         <div class="content">

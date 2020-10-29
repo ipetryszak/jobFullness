@@ -96,11 +96,118 @@ h1 {
 }
 
 .navigation {
-  background-color: #fff;
+  background-color: #ecf0f1;
   width: 60%;
   height: 8rem;
-  border-radius: 1rem;
   margin: -3rem auto 0 auto;
+  border-radius: 1rem;
+}
+
+.filter {
+  border-radius: 1rem;
+  display: flex;
+  height: inherit;
+  width: 100%;
+  background-color: #fff;
+}
+.filter__title {
+  flex: 3;
+  display: flex;
+}
+.filter__title--icon {
+  stroke: #706fd3;
+  width: 20%;
+  transform: scale(0.5);
+}
+.filter__title--input {
+  width: 80%;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+}
+.filter__location {
+  flex: 2;
+  display: flex;
+}
+.filter__location--icon {
+  stroke: #706fd3;
+  width: 20%;
+  transform: scale(0.5);
+  width: 25%;
+}
+.filter__location--input {
+  width: 75%;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+}
+.filter__time {
+  flex: 2;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.filter__time--input {
+  flex: 3;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.filter__time--input p {
+  position: absolute;
+  top: 0.5rem;
+  font-weight: bolder;
+  margin-left: 0.5rem;
+}
+.filter__time--input input {
+  opacity: 0;
+}
+.filter__time--input input:checked + .filter__time--input-checkmark {
+  background-color: #706fd3;
+}
+.filter__time--input input:checked + .filter__time--input-checkmark::after {
+  display: block;
+}
+.filter__time--input-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ecf0f1;
+}
+.filter__time--input-checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 11px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.filter__time--button {
+  flex: 2;
+  background-color: #706fd3;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: auto;
+  padding: 1.2rem 0.5rem;
+  color: #fff;
+  margin-right: 2rem;
+  font-family: "Inconsolata", monospace;
+  font-weight: 500;
+  font-size: 1.4rem;
+  border-radius: 0.3rem;
+}
+.filter__time--button:hover {
+  background: #6463cf;
 }
 
 /*# sourceMappingURL=style.css.map */
