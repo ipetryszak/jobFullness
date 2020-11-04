@@ -237,4 +237,59 @@ h1 {
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 95rem;
+  margin: 5rem auto;
+}
+
+.position-box {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 29rem;
+  flex-shrink: 0;
+  margin: 1rem 1rem 5rem 1rem;
+  height: 20rem;
+  padding: 2.5rem;
+  border-radius: 0.4rem;
+  background: #fff;
+  font-size: 1.5rem;
+  font-family: "Abel", sans-serif;
+  color: #AAA2B9;
+}
+.position-box__logo {
+  position: relative;
+  flex-grow: 1;
+}
+.position-box__logo img {
+  width: 4rem;
+  position: absolute;
+  top: -5rem;
+  left: 0rem;
+  border-radius: 1rem;
+}
+.position-box__published-time {
+  flex-grow: 1;
+  color: #AAA2B9;
+  margin-top: 1rem;
+}
+.position-box__name {
+  flex-grow: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+.position-box__company {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+.position-box__location {
+  flex-grow: 1;
+  color: #706fd3;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */
