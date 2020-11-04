@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 *,
 *::after,
 *::before {
@@ -118,12 +119,22 @@ h1 {
   stroke: #706fd3;
   width: 20%;
   transform: scale(0.5);
+  width: 17%;
+  margin-left: 0.5rem;
+}
+.filter__title--icon:hover {
+  transition: all 0.3s ease;
+  transform: scale(0.6);
 }
 .filter__title--input {
   width: 80%;
   outline: none;
   border: none;
   padding: 1rem 2rem;
+}
+.filter__title--input::placeholder {
+  font-family: "Abel", sans-serif;
+  font-size: 1.5rem;
 }
 .filter__location {
   flex: 2;
@@ -135,11 +146,19 @@ h1 {
   transform: scale(0.5);
   width: 25%;
 }
+.filter__location--icon:hover {
+  transition: all 0.3s ease;
+  transform: scale(0.6);
+}
 .filter__location--input {
   width: 75%;
   outline: none;
   border: none;
   padding: 1rem 2rem;
+}
+.filter__location--input::placeholder {
+  font-family: "Abel", sans-serif;
+  font-size: 1.5rem;
 }
 .filter__time {
   flex: 2;
@@ -159,8 +178,9 @@ h1 {
 .filter__time--input p {
   position: absolute;
   top: 0.5rem;
-  font-weight: bolder;
   margin-left: 0.5rem;
+  font-family: "Abel", sans-serif;
+  font-size: 1.5rem;
 }
 .filter__time--input input {
   opacity: 0;
@@ -178,6 +198,9 @@ h1 {
   height: 25px;
   width: 25px;
   background-color: #ecf0f1;
+}
+.filter__time--input-checkmark:hover {
+  background-color: #d5dde0;
 }
 .filter__time--input-checkmark::after {
   content: "";
@@ -207,7 +230,11 @@ h1 {
   border-radius: 0.3rem;
 }
 .filter__time--button:hover {
-  background: #6463cf;
+  background: #605fce;
+  box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.5);
+}
+.filter__time--button:active {
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */
