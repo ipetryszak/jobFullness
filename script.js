@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded',pageLoadedHandler);
 
 const loadButton = document.querySelector('.button__load-more');
 loadButton.style.display = 'none'
-loadButton.addEventListener('click',displayPositions);
+loadButton.addEventListener('click',loadMore);
 
 function pageLoadedHandler(e) {
     fetch(proxyurl+url)
@@ -20,8 +20,17 @@ function pageLoadedHandler(e) {
         });
 }
 
+function loadMore(event) {
+    console.log(event);
+    let posY = event.pageY - 70;
+    console.log(`posY ${posY}`);
+    displayPositions();
+    window.scrollTo(0,posY);
+}
+
 function displayPositions() {
     let cont = jobPositions;
+    console.log(cont);
     const contentParent = document.querySelector('.content');
 
     let i = 0;
@@ -58,8 +67,15 @@ function displayPositions() {
         positionBox.appendChild(location);
 
         contentParent.appendChild(positionBox);
+        setTimeout(() => {
+            positionBox.style.opacity = '100%'
+            if(img.clientWidth > img.clientHeight){
+                img.style.maxwidth = '25rem';
+                img.style.height = '3rem';
+            }
+        }, i*100);
+
         i++;
         indexPosition++;
     }
 }
-
